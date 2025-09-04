@@ -1,0 +1,6 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ru-webapp-sandbox",
+  "compatibility_date": "2025-08-03",
+  "main": "./src/worker/index.ts"
+}
