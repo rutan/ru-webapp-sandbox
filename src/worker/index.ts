@@ -1,7 +1,3 @@
-import { Hono } from 'hono';
+import { api } from './api';
 
-const app = new Hono<{ Bindings: CloudflareBindings }>();
-
-app.get('/api/ping', (c) => c.json({ name: 'pong' }));
-
-export default app;
+export default api;
