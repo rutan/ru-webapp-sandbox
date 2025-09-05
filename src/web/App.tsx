@@ -11,7 +11,7 @@ const fetchPing = async () => {
   }
   const json = await res.json();
 
-  return json.message;
+  return json;
 };
 
 const PingComponent = () => {
