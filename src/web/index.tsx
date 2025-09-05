@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { createRouter, RouterProvider } from '@tanstack/react-router';
 import { createRoot } from 'react-dom/client';
-import { App } from './App';
+import { routeTree } from '../routeTree.gen';
 
 (() => {
   const root = document.getElementById('root');
@@ -8,11 +9,13 @@ import { App } from './App';
     throw new Error('root element not found');
   }
 
+  const router = createRouter({ routeTree });
+
   const queryClient = new QueryClient();
 
   createRoot(root).render(
     <QueryClientProvider client={queryClient}>
-      <App />
+      <RouterProvider router={router} />
     </QueryClientProvider>,
   );
 })();

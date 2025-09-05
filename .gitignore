@@ -1,3 +1,6 @@
 /.wrangler
 /node_modules
 /dist
+
+# tanstack-router
+/src/routeTree.gen.ts

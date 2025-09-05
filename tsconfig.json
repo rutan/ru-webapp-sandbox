@@ -15,6 +15,10 @@
     "jsxImportSource": "react",
     "noImplicitReturns": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["vite/client"]
+    "types": ["vite/client"],
+    "paths": {
+      "$worker/*": ["./src/worker/*"],
+      "$share": ["./src/web/modules/_share"]
+    }
   }
 }

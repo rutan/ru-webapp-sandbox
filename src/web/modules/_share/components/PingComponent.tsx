@@ -1,6 +1,5 @@
 import { useSuspenseQuery } from '@tanstack/react-query';
-import { Suspense } from 'react';
-import { hcWithType } from '../worker/client';
+import { hcWithType } from '$worker/client';
 
 const fetchPing = async () => {
   const client = hcWithType('/');
@@ -14,7 +13,7 @@ const fetchPing = async () => {
   return json;
 };
 
-const PingComponent = () => {
+export const PingComponent = () => {
   const { data: ping, error } = useSuspenseQuery({
     queryKey: ['ping'],
     queryFn: fetchPing,
@@ -25,15 +24,4 @@ const PingComponent = () => {
   }
 
   return <div>{JSON.stringify(ping)}</div>;
-};
-
-export const App = () => {
-  return (
-    <div>
-      <div>ru-webapp-sandbox</div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <PingComponent />
-      </Suspense>
-    </div>
-  );
 };
