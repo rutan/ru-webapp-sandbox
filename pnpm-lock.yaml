@@ -63,6 +63,9 @@ importers:
       drizzle-kit:
         specifier: ^0.31.4
         version: 0.31.4
+      jiti:
+        specifier: ^2.5.1
+        version: 2.5.1
       npm-run-all2:
         specifier: ^8.0.4
         version: 8.0.4
